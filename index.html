@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Jano ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:
+        radial-gradient(circle at 50% 0%,#3b123f,transparent 40%),
+        linear-gradient(180deg,#070714,#160719,#090711);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+#particles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{
+        opacity:.15;
+        transform:scale(.6);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+/* ================= PETALS ================= */
+
+.petal{
+    position:fixed;
+    top:-50px;
+    z-index:2;
+    pointer-events:none;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(-50px) rotate(0);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+/* ================= HEARTS ================= */
+
+.heart{
+    position:fixed;
+    bottom:-50px;
+    z-index:3;
+    pointer-events:none;
+    animation:heartFloat linear forwards;
+}
+
+@keyframes heartFloat{
+    0%{
+        transform:translateY(0) scale(.5) rotate(0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) scale(1.5) rotate(30deg);
+        opacity:0;
+    }
+}
+
+/* ================= MAIN ================= */
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:auto;
+    padding:25px 15px 50px;
+    position:relative;
+    z-index:5;
+}
+
+/* ================= MUSIC ================= */
+
+.music{
+    position:fixed;
+    top:20px;
+    left:20px;
+    z-index:20;
+
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+    border:1px solid #ff4f9a;
+
+    background:rgba(20,0,20,.8);
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:0 0 20px #ff277d;
+
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{
+        box-shadow:0 0 10px #ff277d;
+    }
+
+    50%{
+        box-shadow:0 0 35px #ff277d;
+    }
+}
+
+/* ================= TOP ================= */
+
+.top{
+    text-align:center;
+    margin-top:30px;
+
+    animation:fadeDown 1.5s ease;
+}
+
+.small{
+    color:#ff9bc5;
+    font-size:18px;
+    font-style:italic;
+    margin-bottom:15px;
+}
+
+h1{
+    font-size:clamp(45px,9vw,90px);
+    line-height:1;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ff79ae,
+            #ffd36b,
+            #fff
+        );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+    animation:titleGlow 5s infinite;
+}
+
+@keyframes titleGlow{
+    0%{
+        background-position:0%;
+    }
+
+    50%{
+        background-position:100%;
+    }
+
+    100%{
+        background-position:0%;
+    }
+}
+
+.date{
+    display:inline-block;
+
+    margin:25px 0;
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    border:1px solid #ff4d91;
+
+    background:rgba(255,40,120,.12);
+
+    box-shadow:
+        0 0 25px rgba(255,40,120,.4);
+
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    margin-top:20px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,100,170,.5);
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+        0 0 40px rgba(255,30,130,.15),
+        inset 0 0 30px rgba(255,100,180,.05);
+
+    animation:fadeUp 1.5s ease;
+}
+
+.hero h2{
+    color:#ff7eb4;
+
+    font-size:
+        clamp(25px,5vw,42px);
+
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.8;
+    color:#eee;
+}
+
+.big-heart{
+    display:inline-block;
+    animation:heartBeat 1.3s infinite;
+}
+
+@keyframes heartBeat{
+    0%,100%{
+        transform:scale(1);
+    }
+
+    15%{
+        transform:scale(1.3);
+    }
+
+    30%{
+        transform:scale(1);
+    }
+
+    45%{
+        transform:scale(1.2);
+    }
+}
+
+/* ================= COUNTDOWN ================= */
+
+.countdown-title{
+    text-align:center;
+
+    margin:50px 0 20px;
+
+    color:#ffd36b;
+
+    font-size:24px;
+}
+
+.timer{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:15px;
+}
+
+.time-box{
+    padding:22px 10px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid #ff4c94;
+
+    box-shadow:
+        0 0 20px rgba(255,40,130,.25);
+
+    transition:.3s;
+}
+
+.time-box:hover{
+    transform:
+        translateY(-10px)
+        scale(1.04);
+
+    box-shadow:
+        0 0 35px #ff3d91;
+}
+
+.number{
+    font-size:40px;
+    font-weight:bold;
+    color:#ff72ad;
+}
+
+.time-label{
+    color:#ccc;
+    margin-top:5px;
+}
+
+/* ================= SECTION TITLE ================= */
+
+.section-title{
+    text-align:center;
+
+    font-size:30px;
+
+    margin:60px 0 25px;
+
+    color:#ff87b8;
+}
+
+/* ================================================= */
+/*              5 PHOTOS + CENTER CAKE              */
+/* ================================================= */
+
+.memory-stage{
+
+    position:relative;
+
+    width:min(92vw,900px);
+
+    aspect-ratio:1/1;
+
+    margin:0 auto;
+
+    display:grid;
+
+    place-items:center;
+}
+
+/* Outer glowing circle */
+
+.memory-stage::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:7%;
+
+    border:
+        1px solid
+        rgba(255,100,180,.22);
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 60px
+        rgba(255,50,150,.10),
+
+        inset 0 0 60px
+        rgba(255,50,150,.06);
+
+    animation:
+        orbitGlow
+        4s
+        ease-in-out
+        infinite;
+}
+
+@keyframes orbitGlow{
+
+    0%,100%{
+        transform:scale(.98);
+        opacity:.65;
+    }
+
+    50%{
+        transform:scale(1.02);
+        opacity:1;
+    }
+}
+
+/* Dashed inner circle */
+
+.orbit-line{
+
+    position:absolute;
+
+    inset:15%;
+
+    border:
+        1px dashed
+        rgba(255,180,220,.18);
+
+    border-radius:50%;
+}
+
+/* ================= PHOTOS ================= */
+
+.memory-photo{
+
+    position:absolute;
+
+    width:24%;
+
+    aspect-ratio:3/4;
+
+    padding:5px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff72ad,
+            #ffd36b,
+            #ff3f91
+        );
+
+    box-shadow:
+        0 12px 35px
+        rgba(0,0,0,.55),
+
+        0 0 25px
+        rgba(255,60,145,.28);
+
+    transition:.5s;
+
+    z-index:4;
+}
+
+.memory-photo img{
+
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    border-radius:17px;
+}
+
+.memory-photo:hover{
+
+    transform:
+        scale(1.12)
+        rotate(0deg);
+
+    z-index:10;
+
+    box-shadow:
+        0 0 45px #ff4b99;
+}
+
+/* Photo positions */
+
+.photo1{
+    top:2%;
+    left:38%;
+    transform:rotate(-4deg);
+}
+
+.photo2{
+    top:22%;
+    right:3%;
+    transform:rotate(6deg);
+}
+
+.photo3{
+    bottom:7%;
+    right:15%;
+    transform:rotate(4deg);
+}
+
+.photo4{
+    bottom:7%;
+    left:15%;
+    transform:rotate(-5deg);
+}
+
+.photo5{
+    top:22%;
+    left:3%;
+    transform:rotate(5deg);
+}
+
+/* ================= CENTER CAKE ================= */
+
+.cake-center{
+
+    position:absolute;
+
+    z-index:8;
+
+    width:30%;
+
+    aspect-ratio:1/1;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,110,175,.30),
+            rgba(50,8,45,.75) 58%,
+            rgba(10,5,20,.2) 70%
+        );
+
+    border:
+        2px solid
+        rgba(255,150,210,.55);
+
+    box-shadow:
+
+        0 0 25px #ff3d91,
+
+        0 0 75px
+        rgba(255,45,145,.38),
+
+        inset 0 0 35px
+        rgba(255,180,220,.15);
+
+    animation:
+        cakeFloat
+        3s
+        ease-in-out
+        infinite;
+}
+
+.cake-emoji{
+
+    font-size:
+        clamp(
+            65px,
+            12vw,
+            115px
+        );
+
+    filter:
+        drop-shadow(
+            0 0 15px
+            #ff70b0
+        );
+}
+
+.cake-text{
+
+    position:absolute;
+
+    bottom:15%;
+
+    font-size:
+        clamp(
+            11px,
+            2vw,
+            16px
+        );
+
+    color:#ffd6e8;
+
+    letter-spacing:1px;
+
+    font-weight:bold;
+}
+
+@keyframes cakeFloat{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50%{
+        transform:
+            translateY(-10px)
+            scale(1.035);
+    }
+}
+
+/* ================= LOVE NOTE ================= */
+
+.note{
+
+    margin-top:60px;
+
+    padding:45px 25px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(255,170,100,.12),
+            transparent 25%
+        ),
+
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    box-shadow:
+        0 0 30px
+        rgba(255,100,150,.1);
+}
+
+.moon{
+
+    font-size:60px;
+
+    animation:
+        moonFloat
+        4s
+        infinite
+        ease-in-out;
+}
+
+@keyframes moonFloat{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+
+    50%{
+        transform:
+            translateY(-12px)
+            rotate(5deg);
+    }
+}
+
+.note h2{
+
+    margin:15px 0;
+
+    color:#ffd66d;
+}
+
+.note p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    font-style:italic;
+}
+
+/* ================= GIFT ================= */
+
+.gift-section{
+
+    margin-top:60px;
+
+    text-align:center;
+}
+
+.gift{
+
+    width:130px;
+
+    height:110px;
+
+    margin:25px auto;
+
+    position:relative;
+
+    cursor:pointer;
+
+    animation:
+        giftFloat
+        2.5s
+        infinite;
+}
+
+.gift-box{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:130px;
+
+    height:85px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3c72,
+            #b90d45
+        );
+
+    border-radius:8px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(255,0,90,.4);
+}
+
+.gift-lid{
+
+    position:absolute;
+
+    top:10px;
+
+    left:-7px;
+
+    width:144px;
+
+    height:30px;
+
+    background:#ff668f;
+
+    border-radius:8px;
+
+    z-index:2;
+}
+
+.ribbon-v{
+
+    position:absolute;
+
+    width:20px;
+
+    height:100%;
+
+    background:#ffd35a;
+
+    left:55px;
+}
+
+.ribbon-h{
+
+    position:absolute;
+
+    width:100%;
+
+    height:15px;
+
+    background:#ffd35a;
+
+    top:32px;
+}
+
+@keyframes giftFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+.gift.open{
+
+    animation:
+        giftOpen
+        .8s
+        forwards;
+}
+
+@keyframes giftOpen{
+
+    50%{
+        transform:
+            scale(1.15)
+            rotate(-5deg);
+    }
+
+    100%{
+        transform:
+            scale(1)
+            rotate(0);
+    }
+}
+
+.gift-text{
+
+    font-size:24px;
+
+    color:#ffd36b;
+}
+
+/* ================= FINAL ================= */
+
+.final{
+
+    margin-top:60px;
+
+    text-align:center;
+
+    padding:45px 20px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,30,100,.08);
+
+    border:
+        1px solid #ff3d86;
+
+    box-shadow:
+        0 0 40px
+        rgba(255,30,100,.2);
+}
+
+.final h2{
+
+    color:#ff79b1;
+
+    font-size:
+        clamp(
+            30px,
+            6vw,
+            50px
+        );
+
+    animation:
+        glow
+        2s
+        infinite
+        alternate;
+}
+
+@keyframes glow{
+
+    from{
+        text-shadow:
+            0 0 10px
+            #ff3d91;
+    }
+
+    to{
+        text-shadow:
+            0 0 35px
+            #ff3d91,
+
+            0 0 60px
+            #ff3d91;
+    }
+}
+
+.final p{
+
+    margin-top:15px;
+
+    font-size:18px;
+
+    line-height:1.8;
+}
+
+.footer{
+
+    text-align:center;
+
+    margin-top:45px;
+
+    color:#ffb5d3;
+}
+
+/* ================= CONFETTI ================= */
+
+.confetti{
+
+    position:fixed;
+
+    top:-20px;
+
+    width:8px;
+
+    height:14px;
+
+    z-index:100;
+
+    pointer-events:none;
+
+    animation:
+        confettiFall
+        4s
+        linear
+        forwards;
+}
+
+@keyframes confettiFall{
+
+    to{
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity:0;
+    }
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    .container{
+        padding:
+            20px 12px 40px;
+    }
+
+    .timer{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .memory-stage{
+
+        width:96vw;
+
+        aspect-ratio:
+            1/1.05;
+    }
+
+    .memory-stage::before{
+        inset:5%;
+    }
+
+    .orbit-line{
+        inset:10%;
+    }
+
+    .memory-photo{
+
+        width:29%;
+
+        border-radius:16px;
+
+        padding:4px;
+    }
+
+    .memory-photo img{
+        border-radius:12px;
+    }
+
+    .photo1{
+        top:4%;
+        left:35%;
+    }
+
+    .photo2{
+        top:24%;
+        right:1%;
+    }
+
+    .photo3{
+        bottom:6%;
+        right:10%;
+    }
+
+    .photo4{
+        bottom:6%;
+        left:10%;
+    }
+
+    .photo5{
+        top:24%;
+        left:1%;
+    }
+
+    .cake-center{
+        width:37%;
+    }
+
+    .cake-text{
+        bottom:13%;
+        font-size:10px;
+    }
+
+    .hero{
+        padding:28px 18px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .note p{
+        font-size:17px;
+    }
+}
+
+@media(max-width:430px){
+
+    .memory-photo{
+        width:30%;
+    }
+
+    .cake-center{
+        width:40%;
+    }
+
+    .cake-emoji{
+        font-size:62px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- MUSIC BUTTON -->
+
+<button
+    class="music"
+    id="musicBtn">
+    🎵
+</button>
+
+
+<!-- BACKGROUND PARTICLES -->
+
+<div id="particles"></div>
+
+
+<div class="container">
+
+
+<!-- ================= TOP ================= -->
+
+<div class="top">
+
+    <div class="small">
+        A little surprise, made with love ❤️
+    </div>
+
+    <h1>
+        Happy Birthday, Jano
+        <span class="big-heart">
+            ❤️
+        </span>
+    </h1>
+
+    <div class="date">
+        🎂 24 August • Happy Birthday 🎂
+    </div>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <h2>
+        💌 It’s Only For You ❤️
+    </h2>
+
+    <p>
+
+        Happy Birthday to my most favorite person. ❤️
+
+        <br><br>
+
+        🎂 Happy Birthday, Jano ❤️
+
+        <br>
+
+        Stay happy.
+        Stay beautiful.
+        Keep smiling always. 🥰❤️
+
+    </p>
+
+</section>
+
+
+<!-- ================= COUNTDOWN ================= -->
+
+<h2 class="countdown-title">
+
+    ✨ Countdown to Your Special Day ✨
+
+</h2>
+
+
+<div class="timer">
+
+    <div class="time-box">
+
+        <div
+            class="number"
+            id="days">
+            00
+        </div>
+
+        <div class="time-label">
+            Days
+        </div>
+
+    </div>
+
+
+    <div class="time-box">
+
+        <div
+            class="number"
+            id="hours">
+            00
+        </div>
+
+        <div class="time-label">
+            Hours
+        </div>
+
+    </div>
+
+
+    <div class="time-box">
+
+        <div
+            class="number"
+            id="minutes">
+            00
+        </div>
+
+        <div class="time-label">
+            Minutes
+        </div>
+
+    </div>
+
+
+    <div class="time-box">
+
+        <div
+            class="number"
+            id="seconds">
+            00
+        </div>
+
+        <div class="time-label">
+            Seconds
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= PHOTO SECTION ================= -->
+
+<h2 class="section-title">
+
+    📸 Five Beautiful Moments Around Your Cake 🎂
+
+</h2>
+
+
+<div class="memory-stage">
+
+
+    <!-- Decorative Circle -->
+
+    <div class="orbit-line"></div>
+
+
+    <!-- PHOTO 1 -->
+
+    <div class="memory-photo photo1">
+
+        <img
+            src="https://i.ibb.co.com/3yz7jGWN/file-00000000ef98820badcdcdbf215cc3b5.png"
+            alt="Memory">
+
+    </div>
+
+
+    <!-- PHOTO 2 -->
+
+    <div class="memory-photo photo2">
+
+        <img
+            src="https://i.ibb.co.com/byQSyvC/IMG-20260806-WA0007.jpg"
+            alt="Memory 2">
+
+    </div>
+
+
+    <!-- PHOTO 3 -->
+
+    <div class="memory-photo photo3">
+
+        <img
+            src="https://i.ibb.co.com/Y7k1STmy/IMG-20260806-WA0008.jpg"
+            alt="Memory 3">
+
+    </div>
+
+
+    <!-- PHOTO 4 -->
+
+    <div class="memory-photo photo4">
+
+        <img
+            src="https://i.ibb.co.com/sv7zDDq6/IMG-20260806-WA0009.jpg"
+            alt="Memory 4">
+
+    </div>
+
+
+    <!-- PHOTO 5 -->
+
+    <div class="memory-photo photo5">
+
+        <img
+            src="https://i.ibb.co.com/7BPSBrF/Screenshot-20260322-150146-1.jpg"
+            alt="Memory 5">
+
+    </div>
+
+
+    <!-- CENTER CAKE -->
+
+    <div class="cake-center">
+
+        <div class="cake-emoji">
+            ❤️
+        </div>
+
+        <div class="cake-text">
+            HAPPY BIRTHDAY ❤️
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!-- ================= LOVE NOTE ================= -->
+
+<section class="note">
+
+    <div class="moon">
+        🌙
+    </div>
+
+    <h2>
+        One Last Thing...
+    </h2>
+
+    <p>
+
+        “No matter how far apart we are,
+        my love for you will always be with you. ❤️”
+
+    </p>
+
+</section>
+
+
+<!-- ================= GIFT ================= -->
+
+<section class="gift-section">
+
+    <h2 class="section-title">
+        🎁 Last Surprise
+    </h2>
+
+
+    <div
+        class="gift"
+        id="gift">
+
+        <div class="gift-lid"></div>
+
+
+        <div class="gift-box">
+
+            <div class="ribbon-v"></div>
+
+            <div class="ribbon-h"></div>
+
+        </div>
+
+    </div>
+
+
+    <div class="gift-text">
+
+        Tap the gift 🎁
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL ================= -->
+
+<section class="final">
+
+    <h2>
+
+        Happy Birthday Once Again,
+        Jano! 🎂❤️
+
+    </h2>
+
+
+    <p>
+
+        May your smile never fade,
+        may your dreams come true,
+        and may every coming year
+        be more beautiful than the last. ✨
+
+    </p>
+
+
+    <br>
+
+
+    <h3>
+        ❤️ Always Keep Smiling ❤️
+    </h3>
+
+
+    <br>
+
+
+    <i>
+        — With lots of love 🌹
+    </i>
+
+</section>
+
+
+<div class="footer">
+
+    Made with ❤️ especially for you
+
+</div>
+
+
+</div>
+
+
+<script>
+
+/* ================================================= */
+/*                    STARS                          */
+/* ================================================= */
+
+const particles =
+    document.getElementById(
+        "particles"
+    );
+
+
+for(let i=0;i<90;i++){
+
+    const star =
+        document.createElement("div");
+
+    star.className =
+        "star";
+
+    star.style.left =
+        Math.random()*100 + "%";
+
+    star.style.top =
+        Math.random()*100 + "%";
+
+    star.style.animationDelay =
+        Math.random()*3 + "s";
+
+    particles.appendChild(
+        star
+    );
+}
+
+
+/* ================================================= */
+/*                    PETALS                         */
+/* ================================================= */
+
+function createPetal(){
+
+    const petal =
+        document.createElement("div");
+
+    petal.className =
+        "petal";
+
+
+    const icons = [
+        "🌹",
+        "🌸",
+        "🍂",
+        "❤️"
+    ];
+
+
+    petal.innerHTML =
+        icons[
+            Math.floor(
+                Math.random()*icons.length
+            )
+        ];
+
+
+    petal.style.left =
+        Math.random()*100 + "vw";
+
+
+    petal.style.fontSize =
+        (
+            12 +
+            Math.random()*18
+        ) + "px";
+
+
+    petal.style.animationDuration =
+        (
+            5 +
+            Math.random()*7
+        ) + "s";
+
+
+    document.body.appendChild(
+        petal
+    );
+
+
+    setTimeout(
+        () => petal.remove(),
+        13000
+    );
+}
+
+
+setInterval(
+    createPetal,
+    350
+);
+
+
+/* ================================================= */
+/*                FLOATING HEARTS                    */
+/* ================================================= */
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className =
+        "heart";
+
+
+    const hearts = [
+        "❤️",
+        "💖",
+        "💕",
+        "💗",
+        "💘"
+    ];
+
+
+    heart.innerHTML =
+        hearts[
+            Math.floor(
+                Math.random()*hearts.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random()*100 + "vw";
+
+
+    heart.style.fontSize =
+        (
+            15 +
+            Math.random()*25
+        ) + "px";
+
+
+    heart.style.animationDuration =
+        (
+            5 +
+            Math.random()*6
+        ) + "s";
+
+
+    document.body.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        () => heart.remove(),
+        12000
+    );
+}
+
+
+setInterval(
+    createHeart,
+    700
+);
+
+
+/* ================================================= */
+/*                  COUNTDOWN                        */
+/* ================================================= */
+
+const targetDate =
+    new Date(
+        "2026-08-24T00:00:00+06:00"
+    ).getTime();
+
+
+function updateTimer(){
+
+    const now =
+        new Date().getTime();
+
+
+    const difference =
+        targetDate - now;
+
+
+    if(difference <= 0){
+
+        document.getElementById(
+            "days"
+        ).innerHTML = "00";
+
+
+        document.getElementById(
+            "hours"
+        ).innerHTML = "00";
+
+
+        document.getElementById(
+            "minutes"
+        ).innerHTML = "00";
+
+
+        document.getElementById(
+            "seconds"
+        ).innerHTML = "00";
+
+
+        startConfetti();
+
+        return;
+    }
+
+
+    const days =
+        Math.floor(
+            difference /
+            (
+                1000 *
+                60 *
+                60 *
+                24
+            )
+        );
+
+
+    const hours =
+        Math.floor(
+            (
+                difference %
+                (
+                    1000 *
+                    60 *
+                    60 *
+                    24
+                )
+            )
+            /
+            (
+                1000 *
+                60 *
+                60
+            )
+        );
+
+
+    const minutes =
+        Math.floor(
+            (
+                difference %
+                (
+                    1000 *
+                    60 *
+                    60
+                )
+            )
+            /
+            (
+                1000 *
+                60
+            )
+        );
+
+
+    const seconds =
+        Math.floor(
+            (
+                difference %
+                (
+                    1000 *
+                    60
+                )
+            )
+            /
+            1000
+        );
+
+
+    document.getElementById(
+        "days"
+    ).innerHTML =
+        String(days).padStart(
+            2,
+            "0"
+        );
+
+
+    document.getElementById(
+        "hours"
+    ).innerHTML =
+        String(hours).padStart(
+            2,
+            "0"
+        );
+
+
+    document.getElementById(
+        "minutes"
+    ).innerHTML =
+        String(minutes).padStart(
+            2,
+            "0"
+        );
+
+
+    document.getElementById(
+        "seconds"
+    ).innerHTML =
+        String(seconds).padStart(
+            2,
+            "0"
+        );
+}
+
+
+updateTimer();
+
+
+setInterval(
+    updateTimer,
+    1000
+);
+
+
+/* ================================================= */
+/*                    GIFT                           */
+/* ================================================= */
+
+const gift =
+    document.getElementById(
+        "gift"
+    );
+
+
+gift.addEventListener(
+    "click",
+    () => {
+
+        gift.classList.add(
+            "open"
+        );
+
+
+        startConfetti();
+
+
+        setTimeout(
+            () => {
+
+                alert(
+                    "🎁 Surprise! ❤️\n\n" +
+                    "Happy Birthday, Jano! 🎂\n" +
+                    "You are very special for me. ❤️"
+                );
+
+            },
+            600
+        );
+
+    }
+);
+
+
+/* ================================================= */
+/*                  CONFETTI                         */
+/* ================================================= */
+
+function startConfetti(){
+
+    for(
+        let i=0;
+        i<100;
+        i++
+    ){
+
+        const confetti =
+            document.createElement(
+                "div"
+            );
+
+
+        confetti.className =
+            "confetti";
+
+
+        const colors = [
+            "#ff4f91",
+            "#ffd166",
+            "#ffffff",
+            "#9bf6ff",
+            "#ff7eb6"
+        ];
+
+
+        confetti.style.left =
+            Math.random()*100 + "vw";
+
+
+        confetti.style.background =
+            colors[
+                Math.floor(
+                    Math.random()*colors.length
+                )
+            ];
+
+
+        confetti.style.animationDuration =
+            (
+                2 +
+                Math.random()*3
+            ) + "s";
+
+
+        confetti.style.animationDelay =
+            (
+                Math.random()*1.5
+            ) + "s";
+
+
+        document.body.appendChild(
+            confetti
+        );
+
+
+        setTimeout(
+            () => confetti.remove(),
+            6000
+        );
+    }
+}
+
+
+/* ================================================= */
+/*                    MUSIC                          */
+/* ================================================= */
+
+let musicPlaying =
+    false;
+
+
+const musicBtn =
+    document.getElementById(
+        "musicBtn"
+    );
+
+
+musicBtn.addEventListener(
+    "click",
+    () => {
+
+        musicPlaying =
+            !musicPlaying;
+
+
+        musicBtn.innerHTML =
+            musicPlaying
+            ? "⏸️"
+            : "🎵";
+
+
+        if(musicPlaying){
+
+            alert(
+                "🎵 Music button ready!\n\n" +
+                "Add your MP3 file as music.mp3 " +
+                "to play your own birthday song."
+            );
+
+        }
+
+    }
+);
+
+
+/* ================================================= */
+/*              INITIAL CONFETTI                     */
+/* ================================================= */
+
+setTimeout(
+    () => {
+
+        startConfetti();
+
+    },
+    1000
+);
+
+</script>
+
+</body>
+</html>
